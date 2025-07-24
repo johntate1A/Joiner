@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Joining Roblox Server...</title>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const placeId = urlParams.get("placeId");
+            const gameInstanceId = urlParams.get("gameInstanceId");
+
+            if (placeId && gameInstanceId) {
+                window.location.href = `roblox://placeId=${placeId}&gameInstanceId=${gameInstanceId}`;
+            } else {
+                document.body.innerHTML = "<h2>❌ Invalid or missing server link.</h2>";
+            }
+        </script>
+    </head>
+    <body>
+        <p>🔄 Redirecting you to Roblox...</p>
+    </body>
+</html>
