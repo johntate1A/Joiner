@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Join Roblox Server</title>
+    <title>Roblox Join Redirect</title>
     <script>
+      // Get query parameters
       const params = new URLSearchParams(window.location.search);
       const placeId = params.get("placeId");
       const gameInstanceId = params.get("gameInstanceId");
 
       if (placeId && gameInstanceId) {
-        const url = `roblox://placeId=${placeId}&gameInstanceId=${gameInstanceId}`;
-        window.location.href = url;
+        const robloxLink = `roblox://placeId=${placeId}&gameInstanceId=${gameInstanceId}`;
+        window.location.href = robloxLink;
       } else {
-        document.write("Missing placeId or gameInstanceId.");
+        document.write("❌ Missing placeId or gameInstanceId in URL.");
       }
     </script>
   </head>
